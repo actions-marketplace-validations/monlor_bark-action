@@ -1,9 +1,11 @@
 # Bark Action
 
-![](https://img.shields.io/github/license/shink/bark-action.svg)
+![](https://img.shields.io/github/license/monlor/bark-action.svg)
 ![](https://img.shields.io/badge/language-shell-89E051.svg)
-![](https://img.shields.io/github/stars/shink/bark-action.svg?label=stars&logo=github)
-![](https://img.shields.io/github/forks/shink/bark-action.svg?label=forks&logo=github)
+![](https://img.shields.io/github/stars/monlor/bark-action.svg?label=stars&logo=github)
+![](https://img.shields.io/github/forks/monlor/bark-action.svg?label=forks&logo=github)
+
+Fork from https://github.com/shink/bark-action
 
 An action for [Finb/Bark](https://github.com/Finb/Bark)
 
@@ -20,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push notifications
-        uses: shink/bark-action@v1
+        uses: monlor/bark-action@v1
         with:
           host: ${{ secrets.BARK_HOST}} # not required
           key: ${{ secrets.KEY }}   # Your secret key
