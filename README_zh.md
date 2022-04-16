@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push notifications
-        uses: monlor/bark-action@v1
+        uses: monlor/bark-action@v2
         with:
           host: ${{ secrets.BARK_HOST}} # not required
           key: ${{ secrets.KEY }}   # Your secret key
