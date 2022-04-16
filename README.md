@@ -24,6 +24,7 @@ jobs:
       - name: Push notifications
         uses: shink/bark-action@v1
         with:
+          host: ${{ secrets.BARK_HOST}} # not required
           key: ${{ secrets.KEY }}   # Your secret key
           title: Message title
           body: Message body
@@ -32,10 +33,13 @@ jobs:
           url: https://yuanhaoji.com
           automaticallyCopy: 1
           copy: Content copied to clipboard
+          group: Message group
+          icon: Message icon url
 ```
 
 > Among them, only the `key` parameter is required
 
+- `host`: bark service host, default is https://api.day.app
 - `title`: Message title (a bit thicker than the content font size)
 - `body`: Message content
 - `sound`: [Push notification sound](https://github.com/Finb/Bark/tree/master/Sounds)
@@ -43,6 +47,8 @@ jobs:
 - `url`: The address that will be redirected to the url (when sending, URL parameters need to be encoded)
 - `automaticallyCopy`: When this parameter is carried, the content will be automatically copied to the clipboard
 - `copy`: When carrying this parameter, only the value of this parameter will be copied
+- `group`: Message group
+- `icon`: Message icon url
 
 ## License
 
