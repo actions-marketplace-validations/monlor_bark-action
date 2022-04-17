@@ -24,15 +24,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push notifications
-        uses: monlor/bark-action@v2
+        uses: monlor/bark-action@v3
         with:
           host: ${{ secrets.BARK_HOST}} # not required
-          key: ${{ secrets.KEY }}   # Your secret key
+          key: ${{ secrets.BARK_KEY }}   # Your secret key
           title: Message title
           body: Message body
           sound: alarm
           isArchive: 1
-          url: https://yuanhaoji.com
+          url: https://www.monlor.com
           automaticallyCopy: 1
           copy: Content copied to clipboard
           group: Message group
